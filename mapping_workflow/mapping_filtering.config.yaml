@@ -1,0 +1,347 @@
+# Tag identifying file association.
+TAG: johannegottenborg:EcoGenetics,population_genetics,mapping:workflowconfiguration
+# The name of the relevant project account.
+account: ostrich_thermal
+# Taxonomic group
+taxonomic_group: Birds
+# Name of species being analyzed
+species_name: Struthio camelus
+# Path to indexed reference genome file in FASTA format
+#reference_genome_path: /faststorage/project/ostrich_thermal/people/johanneg/indexed_ref_genome/Struthio_camelus/reference/Struthio_camelus_HiC.fasta
+reference_genome_path: /faststorage/project/ostrich_thermal/people/johanneg/indexed_ref_genome_chromosome_assembly/Struthio_camelus/reference/GCF_040807025.1_bStrCam1.hap1_genomic.fna
+#reference_genome_path: /faststorage/project/ostrich_thermal/people/johanneg/indexed_ref_genome_chromosome_assembly/wo_unmapped_contigs/Struthio_camelus/reference/2024_Struthio_camelus_reference_only_chromosomes.fna
+# Directory for intermediary files.sparQ UDI Adapters sequences
+#working_directory_path: /faststorage/project/ostrich_thermal/people/johanneg/stru10ind_testing/mapping_and_filtering_combined
+working_directory_path: /faststorage/project/ostrich_thermal/people/johanneg/stru200ind_testing/mapping
+# Directory for final output files. (If left empty, output file will be placed within 'working_directory_path')
+#output_directory_path: /faststorage/project/ostrich_thermal/people/johanneg/stru10ind_testing/mapping_and_filtering_combined
+output_directory_path: /faststorage/project/ostrich_thermal/people/johanneg/stru200ind_testing/mapping
+# AdapterRemoval settings.
+adapterremoval_settings:
+  min_quality: 25
+  min_length: 20
+  adaptersequence1: AGATCGGAAGAGCACACGTCTGAACTCCAGTCA
+  adaptersequence2: AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+# Samtools filter settings.
+filter_settings:
+  flags_excluded: 3844
+  flags_required: 
+  min_mq: 20
+  #min_mq: 50
+# Repeat filtering
+files_containing_repeat_regions:
+  - /faststorage/project/ostrich_thermal/people/johanneg/indexed_ref_genome_chromosome_assembly/regions_to_filter_out/low_mappability_merged.bed
+  - /faststorage/project/ostrich_thermal/people/johanneg/indexed_ref_genome_chromosome_assembly/regions_to_filter_out/repeatmodeler_repeats.bed
+  - /faststorage/project/ostrich_thermal/people/johanneg/indexed_ref_genome_chromosome_assembly/regions_to_filter_out/repeats_found_with_RepBase.bed
+# List of path to sample folders containing resequencing data.
+sample_lists:
+  -
+    group_name: stru10ind
+    sample_folder_list:
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru10ind/ind-4-189
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru10ind/ind-4-238
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru10ind/ind-7-233
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru10ind/ind-7-376
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru10ind/ind-8-391
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru10ind/ind-8-494
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru10ind/ind-9-272
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru10ind/ind-10-168
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru10ind/ind-10-506
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru10ind/ind-23255
+  -
+    group_name: stru96a1
+    sample_folder_list:
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/10--184
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/10--207
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/10--365
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/10--371
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/10--425
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/10--426
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/10--429
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/10--435
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/10--447
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/10--45
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/10--472
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/10--486
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/10--508
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/10--55
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/10--593
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/10--634
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/10--675
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/10--8
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/12--186
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/12--215
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/12--246
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/12--257
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/12--37
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/12--434
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/12--435
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/12--491
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/12--5
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/12--6
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/12--607
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/12--611
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/12--624
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/12--63
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/12--651
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/12--67
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/1--976
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/2--349
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/3--347
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/3--37
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/4--1019
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/4--21
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/4--218
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/4--235
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/4--247
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/4--288
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/4--34
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/4--351
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/4--356
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/4--358
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/4--436
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/4--61
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/4--88
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/5--102
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/5--2
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/5--21
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/5--239
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/5--276
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/5--301
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/5--358
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/6--2
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/6--219
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/6--265
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/6--276
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/6--305
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/6--372
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/6--389
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/6--421
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/6--442
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/7--1
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/7--144
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/7--174
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/7--195
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/7--209
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/7--356
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/7--444
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/7--67
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/7--72
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/7--74
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/8--38
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/8--411
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/8--454
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/8--495
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/8--8
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/9--124
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/9--181
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/9--187
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/9--19
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/9--21
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/9--253
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/9--305
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/9--312
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/93--37
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/9--34
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/9--4
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/9--47
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/9--5
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96a1/90-1131704334/00_fastq/9--78
+  # -
+  #   group_name: stru96b1
+  #   sample_folder_list:
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-11
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-13
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-16
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-18
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-19
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-20
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-21
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-22
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-28
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-40
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-41
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-42
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-43
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-44
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-45
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-46
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-47
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-48
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-5
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-55
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-56
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-57
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-59
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-6
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-61
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-63
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-64
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-65
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-67
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-68
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-69
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-7
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-73
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-74
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-75
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-77
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-78
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-79
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-82
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-83
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-84
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-86
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-87
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-88
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-89
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-93
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/MJ23-94
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-102
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-103
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-104
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-112
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-113
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-114
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-115
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-117
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-120
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-121
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-123
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-124
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-127
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-133
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-134
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-137
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-139
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-141
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-142
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-145
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-146
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-150
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-152
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-156
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-158
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-162
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-163
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-168
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-169
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-170
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-171
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-172
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-173
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-174
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-175
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-176
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-177
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-178
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-180
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-181
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-91
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-92
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-95
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-96
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/PN23-98
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/TL23-13
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/TL23-14
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/TL23-15
+  #     - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b1/90-1153270265/00_fastq/TL23-3
+  -
+    group_name: stru96b2
+    sample_folder_list:
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/10-748
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/1-11
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/11-138
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/11-29
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/11-291
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/11-34
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/11-37
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/11-421
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/11-82
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/12-299
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/12-318
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/12-331
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/12-34
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/12-43
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/12-66
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/13-107
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/13-14
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/13-141
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/13-153
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/13-166
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/13-174
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/13-21
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/13-232
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/13-248
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/13-262
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/13-316
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/13-325
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/13-369
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/13-381
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/13-39
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/13-398
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/13-413
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/13-43
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/14-037
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/14-061
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/14-106
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/14-133
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/14-201
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/14-256
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/14-257
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/14-26
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/14-266
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/14-267
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/15-07
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/15-11-2016-14-A4
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/15-11-2016-14-E5
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/15-118
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/15-122
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/15-128
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/15-141
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/15-152
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/15-234
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/15-287
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/15-37
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/15-42
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/15-448
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/15-45
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/15-454
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/15-61
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/15-84
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/15-99
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/1-618
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/2-4
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/3-176
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/3-223
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/3-32
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/3-34
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/4-347
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/4-363
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/4-365
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/4-81
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/5-29
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/5-4
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/5-753
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/5-9
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/6-108
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/6-195
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/6-331
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/7-138
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/7-26
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/8-157
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/8-182
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/8-23-2012-4-59
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/8-23-2012-6-77
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/8-297
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/8-466
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/8-498
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/9-166
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/9-194
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/9-201
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/9-26
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/9-273
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/9-328
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/9-329
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/99-2
+      - /faststorage/project/ostrich_thermal/BACKUP/ostrichbank/fastq/stru96b2/90-1145910134/00_fastq/99-49
