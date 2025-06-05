@@ -1,0 +1,51 @@
+# Tag identifying file association.
+TAG: johannegottenborg:EcoGenetics,population_genetics,popgen_GL_analyses:workflowconfiguration
+# The name of the relevant project account.
+account: ostrich_thermal
+# Taxonomic group
+taxonomic_group: Birds
+# Name of species being analyzed
+species_name: Struthio camelus
+# Path to indexed reference genome file in FASTA format
+#reference_genome_path: /faststorage/project/ostrich_thermal/people/johanneg/indexed_ref_genome/Struthio_camelus/reference/Struthio_camelus_HiC.fasta
+reference_genome_path: /faststorage/project/ostrich_thermal/people/johanneg/indexed_ref_genome_chromosome_assembly/Struthio_camelus/reference/GCF_040807025.1_bStrCam1.hap1_genomic.fna
+#reference_genome_path: /faststorage/project/ostrich_thermal/people/johanneg/indexed_ref_genome_chromosome_assembly/wo_unmapped_contigs/Struthio_camelus/reference/2024_Struthio_camelus_reference_only_chromosomes.fna
+# Directory for intermediary files.sparQ UDI Adapters sequences
+#working_directory_path: /faststorage/project/ostrich_thermal/people/johanneg/stru10ind_testing/mapping_and_filtering_combined
+working_directory_path: /faststorage/project/ostrich_thermal/people/johanneg/MSc_final_analyses/from_workflow
+# Directory for final output files. (If left empty, output file will be placed within 'working_directory_path')
+#output_directory_path: /faststorage/project/ostrich_thermal/people/johanneg/stru10ind_testing/mapping_and_filtering_combined
+output_directory_path: /faststorage/project/ostrich_thermal/people/johanneg/MSc_final_analyses/from_workflow
+
+# Filtering settings
+GL_model: 
+  - 1 # SAMtools
+  - 2 # GATK
+minBaseQ: 20
+minMapQ: 30
+SNP_Pval: 1e-6
+HWE_pval: 0.00025
+
+# Filtering measures for blacks
+minTotalDepth: 154
+maxTotalDepth: 922
+MAF: 0.005
+minInd: 114
+
+# Filtering measure for blues
+# minTotalDepth: 26 # (3.7*21)/3
+# maxTotalDepth: 156 # 3.7*21*2
+# MAF: 0.04 # ≈1/21
+# minInd: 18 # (180/202) * 21
+
+# minInd 180 only includes sites that have information from at least 180 of the individuals
+# setMinDepth and setMaxDepth filters out sites, where the total depth (combined across all individuals) are below or above the chosen thresholds
+## Thresholds are based on calculation:
+## Mean samples coverage = 2.82. Mean total coverage = 202*2.82 ≈ 570
+## setMaxDepth to 2 * mean total coverage = 2 * 570 = 1140
+## setMinDepth to 1/3 * mean total coverage = 1/3 * 665 = 190
+
+# List of .txt-files containing paths to bam-files of different groups of individuals
+all_202_inds: /faststorage/project/ostrich_thermal/people/johanneg/MSc_final_analyses/from_workflow/all_202_inds.txt
+blacks: /faststorage/project/ostrich_thermal/people/johanneg/MSc_final_analyses/from_workflow/only_blacks.txt
+blues: /faststorage/project/ostrich_thermal/people/johanneg/MSc_final_analyses/from_workflow/only_blues.txt
